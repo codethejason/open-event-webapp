@@ -1,0 +1,1 @@
+var sidenavModule=angular.module("oe.sidenav",[]);sidenavModule.controller("SidenavController",["$mdSidenav","$mdMedia",function(e,n){this.toggleSidenav=function(n){e(n).toggle()}}]);

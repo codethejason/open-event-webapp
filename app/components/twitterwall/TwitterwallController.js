@@ -1,0 +1,1 @@
+var twitModule=angular.module("oe.twitterwall",["ui.router"]);twitModule.config(["$stateProvider",function(t){t.state("twitterwall",{url:"/twitterwall",templateUrl:"app/components/twitterwall/twitterwall.html",controller:"TwitterwallController"})}]),twitModule.controller("TwitterwallController",["$rootScope","$sessionStorage","$scope",function(t,l,e){t.hashtag="fossasia"}]);
