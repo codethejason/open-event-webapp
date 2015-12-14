@@ -5,6 +5,7 @@
     "url": "git://github.com/fossasia/open-event-webapp.git"
   },
   "devDependencies": {
+    "angular-mocks": "^1.4.8",
     "bower": "~1.4.1",
     "gulp": "~3.9.0",
     "gulp-clean": "~0.3.1",
