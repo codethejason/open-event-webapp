@@ -16,12 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'bower_components/angular/angular.js',
-      '*.js',
-      '*/*.js',
-      '*/*/*.js',
-      '*/*/*/*.js',
-      '*/*/*/*/*.js',
-      '*/*/*/*/*/*.js',
+      'app.js',
       'node_modules/angular-mocks/angular-mocks.js',
       'tests/unittests.js'
     ],
@@ -29,7 +24,7 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-        'gulpfile.js'
+        
     ],
 
 
