@@ -16,9 +16,10 @@ sessionsModule.config(['$stateProvider', function($stateProvider) {
 }]);
 
 sessionsModule.controller('SessionsController',
-    ['$mdDialog', '$sessionStorage', '$rootScope', 'ApiJsonFactory',
-        function($mdDialog, $sessionStorage, $rootScope, ApiJsonFactory) {
-            var sc = this;
+    ['$sessionStorage', '$rootScope', 'ApiJsonFactory',
+        function($sessionStorage, $rootScope, ApiJsonFactory) {
+            console.log("I'm here");
+            /*var sc = this;
             if ($sessionStorage.sessions === null ||
                 typeof($sessionStorage.sessions) == 'undefined')
             {
@@ -84,7 +85,7 @@ sessionsModule.controller('SessionsController',
                     targetEvent: event,
 
                 });
-            };
+            };*/
 
         }]);
 
