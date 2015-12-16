@@ -8,18 +8,16 @@ module.exports = function(config) {
     basePath: '',
 
 
-    // frameworks to use
-    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
-
 
     // list of files / patterns to load in the browser
     files: [
+      'assets/js/leaflet.js',
       'bower_components/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      //'open-event-webapp/bower_components/angular-aria/angular-aria.js',
-      //'open-event-webapp/bower_components/angular-animate/angular-animate.js',
+      'bower_components/ngstorage/ngStorage.js',
+      'bower_components/angular-aria/angular-aria.js',
       'bower_components/angular-material/angular-material.js',
+      'bower_components/angular-animate/angular-animate.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'app.js',
       'app/components/**/*.js',
@@ -36,6 +34,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'app/components/**/*.js': 'coverage'
     },
 
 
@@ -71,8 +70,16 @@ module.exports = function(config) {
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,
 
-    // Concurrency level
-    // how many browser should be started simultanous
-    concurrency: Infinity
+    // frameworks to use
+    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    frameworks: ['jasmine'],
+
+
+    plugins : [
+      'karma-coverage',
+      'karma-chrome-launcher',
+      'karma-jasmine',
+    ]
+
   })
 }
