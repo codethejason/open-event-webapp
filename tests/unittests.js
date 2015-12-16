@@ -16,6 +16,7 @@ describe('Sessions', function(){ //describe your object type
     $mdDialog = $injector.get('$mdDialog');
     $rootScope = $injector.get('$rootScope');
     $sessionStorage = $injector.get('$sessionStorage');
+    ApiJsonFactory = _ApiJsonFactory_;
     scope = $rootScope.$new();
     var controller = $controller('SessionsController', {
       $scope: scope,
